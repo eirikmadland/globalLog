@@ -1,3 +1,4 @@
+
 # Advanced Logging Utility - `log`
 
 A versatile JavaScript logging utility designed for enhanced debugging, complete with file tracing, collapsible console groups, and styled variable logging.
@@ -12,8 +13,73 @@ A versatile JavaScript logging utility designed for enhanced debugging, complete
 
 ## Installation
 
-You can use this function directly in your project by importing it or including the script file.
+To use this package in your project, install it via NPM:
 
-To use as part of an NPM package:
 ```bash
-npm install your-package-name
+npm install my-logging-utility
+```
+
+## Usage
+
+### Import and Use
+
+Import the `log` function into your project:
+
+```javascript
+import { log } from 'my-logging-utility';
+```
+
+### Syntax
+
+```javascript
+log(message = '', variables = {}, collapsed = true, ...optionalParams);
+```
+
+### Parameters
+
+- **`message`** (string, optional): The main message to log. Defaults to an empty string.
+- **`variables`** (object, optional): An object containing key-value pairs to log. Defaults to an empty object.
+- **`collapsed`** (boolean, optional): Whether to collapse the console group. Defaults to `true`.
+- **`optionalParams`** (array, optional): Additional information to log. Supports multiple parameters.
+
+### Examples
+
+#### Basic Log
+
+```javascript
+log('Hello World!');
+```
+
+#### Logging Variables
+
+```javascript
+const user = { name: 'Alice', age: 25 };
+log('User Info:', { user });
+```
+
+#### With Collapsible Groups
+
+```javascript
+log('Expanded Group:', { key: 'value' }, false);
+```
+
+#### Additional Parameters
+
+```javascript
+log('Extra Info:', { key: 'value' }, true, 'Additional details here', 42);
+```
+
+### Debug Mode
+
+The logger is controlled by the `DEBUG` flag:
+- **Global Toggle**: Set `GLOBAL_DEBUG` in the script.
+- **Local Override**: Define `DEBUG` in the current execution context to override the global flag.
+
+```javascript
+const DEBUG = false; // Local toggle
+log('This message will not be logged.');
+```
+
+---
+
+Start using `my-logging-utility` to make your debugging process cleaner, more organized, and efficient!
