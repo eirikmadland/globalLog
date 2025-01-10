@@ -1,5 +1,5 @@
 {
-  "name": "globallog",
+  "name": "@eirikmadland/globallog",
   "version": "1.0.0",
   "description": "globalLog - A global console.log replacement",
   "main": "globalLog.js",
