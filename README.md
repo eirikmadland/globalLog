@@ -16,7 +16,7 @@ A versatile JavaScript logging utility designed for enhanced debugging, complete
 To use this package in your project, install it via NPM:
 
 ```bash
-npm install globalLog
+npm install @eirikmadland/globallog
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ npm install globalLog
 Import the `log` function into your project:
 
 ```javascript
-import { log } from 'globalLog';
+import { log } from '@eirikmadland/globallog';
 ```
 
 ### Syntax
